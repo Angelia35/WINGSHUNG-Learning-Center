@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>报价与跟进话术库 · Wingshung Learning Center</title>
-  <meta name="description" content="这里存放新人可直接复制的英文话术，用于询盘首回、报价后跟进、嫌贵处理、MOQ解释和样品推进。">
+  <title>新人考核中心 · Wingshung Learning Center</title>
+  <meta name="description" content="通过选择题和实操任务，判断新人是否已经具备基础业务处理能力。">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-progress-key="wingshung-scripts.html">
-<header class="site-header">
-
-<nav class="nav">
+<body data-progress-key="wingshung-exam.html">
+<header class="site-header"><nav class="nav">
   <a class="brand" href="../index.html"><span class="logo-mark">W</span><span>Wingshung Learning Center</span></a>
   <button class="menu-btn" aria-expanded="false">菜单</button>
   <div class="nav-links">
@@ -25,75 +23,25 @@
     <a href="templates.html">模板</a>
     <a href="exam.html">考核</a>
   </div>
-</nav>
-
-</header>
-
+</nav></header>
 <section class="page-hero">
   <div class="main">
-    <div class="back-row"><a class="back-link" href="../index.html">← 返回首页</a></div>
-    <h1>报价与跟进话术库</h1>
-    <p>这里存放新人可直接复制的英文话术，用于询盘首回、报价后跟进、嫌贵处理、MOQ解释和样品推进。</p>
+    <a class="back-link" href="../index.html">← 返回首页</a>
+    <h1>新人考核中心</h1>
+    <p>通过选择题和实操任务，判断新人是否已经具备基础业务处理能力。</p>
   </div>
 </section>
-
 <main class="main">
-
-<section class="section grid grid-2">
-  <div class="card">
-    <span class="tag">First Reply</span>
-    <h3>新询盘第一轮回复</h3>
-    <div class="script-box" id="script1">Hi, thanks for your inquiry.
-
-To recommend the most suitable solution, may I confirm:
-1. What quantity do you need for the first order?
-2. Do you need customized logo or packaging?
-3. Which country should we ship to?
-4. Is this for retail, promotion, gift project or brand sales?
-
-After confirming these details, we can offer you a more accurate quotation.</div>
-    <br><button class="btn btn-outline" data-copy="#script1">复制话术</button>
-  </div>
-  <div class="card">
-    <span class="tag amber">Price Follow-up</span>
-    <h3>报价后跟进</h3>
-    <div class="script-box" id="script2">Hi, just checking if you had a chance to review our quotation.
-
-If the current price is above your target, we can also adjust the set combination, packaging or material to match your budget. Please let me know your target price range, then I can suggest a better option.</div>
-    <br><button class="btn btn-outline" data-copy="#script2">复制话术</button>
-  </div>
-  <div class="card">
-    <span class="tag red">Too Expensive</span>
-    <h3>客户嫌贵处理</h3>
-    <div class="script-box" id="script3">I understand your concern about the price.
-
-This quotation is based on customized packaging and the current set configuration. If your project has a fixed budget, we can provide 2 alternative options:
-Option A: keep the main items and simplify packaging.
-Option B: adjust the set quantity or material to reduce cost.
-
-May I know your target price? I will check the best workable solution for you.</div>
-    <br><button class="btn btn-outline" data-copy="#script3">复制话术</button>
-  </div>
-  <div class="card">
-    <span class="tag green">Sample</span>
-    <h3>样品推进</h3>
-    <div class="script-box" id="script4">For sample order, we can prepare the available sample first so you can check the quality and details.
-
-If you need logo or customized packaging, we can arrange a pre-production sample after confirming the artwork and sample fee.</div>
-    <br><button class="btn btn-outline" data-copy="#script4">复制话术</button>
-  </div>
-</section>
-
-<section class="section">
-  <div class="notice">新人提醒：话术不是复制完就结束。每次发送前要替换产品、数量、国家、包装、预算和交期信息。</div>
-</section>
-
+<section class="section"><div class="card"><h2>基础选择题</h2>
+<div class="quiz-question" data-question data-correct="b"><h3>1. 客户第一句话问价格，新人最应该先做什么？</h3><label><input type="radio" name="q1" value="a"> 直接发最低价</label><label><input type="radio" name="q1" value="b"> 先确认数量、包装、国家、定制和交期</label><label><input type="radio" name="q1" value="c"> 只发产品目录</label></div>
+<div class="quiz-question" data-question data-correct="c"><h3>2. 客户嫌价格贵，比较好的处理方式是？</h3><label><input type="radio" name="q2" value="a"> 立刻停止跟进</label><label><input type="radio" name="q2" value="b"> 直接说这是最低价</label><label><input type="radio" name="q2" value="c"> 询问目标价，并提供调整配置/包装/材质的方案</label></div>
+<div class="quiz-question" data-question data-correct="a"><h3>3. A+客户通常有什么信号？</h3><label><input type="radio" name="q3" value="a"> 有明确数量、用途、交期、定制和预算信息</label><label><input type="radio" name="q3" value="b"> 只说hello</label><label><input type="radio" name="q3" value="c"> 只要图片不说需求</label></div>
+<div class="quiz-question" data-question data-correct="b"><h3>4. 小MOQ客户一定不能做吗？</h3><label><input type="radio" name="q4" value="a"> 一定不能做，直接拒绝</label><label><input type="radio" name="q4" value="b"> 需要判断是否可走样品、现货或简包装测试单</label><label><input type="radio" name="q4" value="c"> 直接答应所有定制要求</label></div>
+<div class="quiz-question" data-question data-correct="c"><h3>5. 报价后客户已读未回，下一步不建议做什么？</h3><label><input type="radio" name="q5" value="a"> 给替代方案</label><label><input type="radio" name="q5" value="b"> 询问是否需要调整配置</label><label><input type="radio" name="q5" value="c"> 每天只发“any update?”</label></div>
+<button class="btn btn-primary" data-quiz-submit>提交测试</button><p class="notice" data-quiz-result style="margin-top:16px;">完成后点击提交测试查看结果。</p></div></section>
+<section class="section"><div class="card"><h2>实操任务</h2><ul class="checklist"><li><input type="checkbox"> 用英文写一段公司介绍，控制在80词以内。</li><li><input type="checkbox"> 根据一个客户询盘，判断客户类型和客户阶段。</li><li><input type="checkbox"> 写一条新询盘首回话术。</li><li><input type="checkbox"> 写一条报价后已读未回跟进话术。</li><li><input type="checkbox"> 针对嫌贵客户，提供2个降本方案。</li></ul></div></section>
 </main>
-
-<footer class="footer">
-  <strong>Wingshung Learning Center</strong><br>
-  Internal training website for new employees.
-</footer>
+<footer class="footer"><strong>Wingshung Learning Center</strong><br>Internal training website for new employees.</footer>
 <script src="../js/main.js"></script>
 </body>
 </html>
