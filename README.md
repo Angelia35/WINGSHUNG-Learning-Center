@@ -1,22 +1,13 @@
-# Wingshung Learning Center V2
+# Wingshung Learning Center V3 Flat
 
-这是优化排版后的 GitHub Pages 网站版本。
+平铺版：所有 HTML 文件都在根目录，每个页面自带 CSS 和 JS，不依赖 css/js/pages 文件夹。
 
-## 重点更新
-- 深蓝固定导航栏
-- 渐变首屏
-- 模块色块区分
-- 卡片式知识库布局
-- 学习路径视觉优化
-- 子页面统一风格
-- 搜索、复制话术、学习进度、选择题评分功能保留
+上传方式：
+1. 解压 zip
+2. 选择全部 .html 文件和 README.md
+3. 上传到 GitHub 仓库根目录
+4. 如果仓库里已有旧版同名文件，选择替换/覆盖
+5. 等待 GitHub Pages 自动部署
 
-## 上传方式
-请把本压缩包解压后的文件直接上传到 GitHub 仓库根目录，确保仓库首页直接能看到：
-index.html
-css/
-js/
-pages/
-assets/
-
-不要只上传 zip，也不要让 index.html 多套在一层文件夹里。
+访问首页：
+https://angelia35.github.io/WINGSHUNG-Learning-Center/

@@ -1,16 +1,175 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>外贸业务SOP · Wingshung Learning Center</title>
-  <meta name="description" content="用S1-S5阶段管理客户，从新询盘到订单推进，每一步都有明确动作。">
-  <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>报价与跟进话术库</title>
+<style>
+:root{
+  --navy:#071b33;--navy2:#0f2d52;--blue:#2563eb;--cyan:#06b6d4;
+  --green:#16a34a;--orange:#f97316;--purple:#7c3aed;--red:#dc2626;
+  --slate:#334155;--muted:#64748b;--line:#dbe3ef;--white:#fff;
+  --shadow:0 22px 65px rgba(7,27,51,.12);--radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;
+  background:linear-gradient(180deg,#f7faff 0%,#eef3f9 100%);
+  color:var(--slate);line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+.site-header{
+  position:sticky;top:0;z-index:20;background:rgba(7,27,51,.96);
+  backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{
+  max-width:1240px;margin:0 auto;padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:900}
+.logo-mark{
+  width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#60a5fa,#22d3ee);color:#071b33;font-weight:950;
+}
+.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.nav-links a{color:rgba(255,255,255,.78);font-size:14px;padding:8px 11px;border-radius:999px}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.menu-btn{
+  display:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);
+  color:#fff;border-radius:12px;padding:8px 11px;cursor:pointer
+}
+.hero{
+  position:relative;overflow:hidden;color:#fff;background:
+    radial-gradient(circle at 16% 24%,rgba(56,189,248,.33),transparent 26%),
+    radial-gradient(circle at 88% 12%,rgba(124,58,237,.26),transparent 28%),
+    linear-gradient(135deg,#071b33 0%,#0f2d52 48%,#10203f 100%);
+}
+.hero:before{
+  content:"";position:absolute;inset:0;background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.hero-inner{
+  position:relative;max-width:1240px;margin:0 auto;padding:82px 22px 58px;
+  display:grid;grid-template-columns:1.08fr .92fr;gap:32px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.88);font-size:13px;font-weight:700;
+}
+h1,h2,h3{margin:0 0 14px;line-height:1.18;color:var(--navy)}
+.hero h1{font-size:clamp(40px,5.2vw,68px);color:#fff;letter-spacing:-.07em;margin-top:16px;margin-bottom:18px}
+.hero p{font-size:18px;color:rgba(255,255,255,.80);max-width:780px;margin:0 0 28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  border-radius:14px;padding:11px 16px;font-weight:850;font-size:14px;border:1px solid transparent;cursor:pointer
+}
+.btn-primary{background:linear-gradient(135deg,#2563eb,#06b6d4);color:#fff;box-shadow:0 18px 38px rgba(37,99,235,.25)}
+.btn-light{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.10);color:#fff}
+.btn-outline{background:#fff;color:var(--blue);border-color:#cfe0ff}
+.hero-panel{
+  border-radius:30px;padding:22px;background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 80px rgba(0,0,0,.24);
+}
+.panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini-stat{padding:18px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.13)}
+.mini-stat strong{display:block;color:#fff;font-size:28px;line-height:1.1}
+.mini-stat span{font-size:13px;color:rgba(255,255,255,.75)}
+.main{max-width:1240px;margin:0 auto;padding:46px 22px 80px}
+.section{margin:0 0 44px}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:20px}
+.section-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:900;margin-bottom:8px}
+.section-head p{margin:0;color:var(--muted);max-width:760px}
+.grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{
+  background:rgba(255,255,255,.96);border:1px solid rgba(219,227,239,.92);
+  border-radius:var(--radius);padding:24px;box-shadow:0 12px 30px rgba(7,27,51,.08);
+}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);transition:.2s ease}
+.card p{margin:0;color:var(--muted)}
+.path-wrap{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px;align-items:start}
+.path-aside{background:linear-gradient(145deg,#071b33,#0f2d52);color:#fff;border-radius:28px;padding:26px;box-shadow:var(--shadow)}
+.path-aside h3{color:#fff}.path-aside p{color:rgba(255,255,255,.74);margin:0}
+.timeline{display:grid;gap:14px}
+.timeline-item{
+  display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:start;
+  padding:18px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(7,27,51,.08);
+}
+.day{
+  width:62px;height:62px;border-radius:20px;display:grid;place-items:center;
+  color:#fff;background:linear-gradient(135deg,#2563eb,#06b6d4);font-weight:950;
+}
+.tag{
+  display:inline-flex;border-radius:999px;padding:5px 10px;font-size:12px;
+  font-weight:900;background:#e8f0ff;color:#1d4ed8;margin-bottom:10px;
+}
+.tag.green{background:#dcfce7;color:#15803d}.tag.orange{background:#ffedd5;color:#c2410c}.tag.purple{background:#ede9fe;color:#6d28d9}
+.tag.red{background:#fee2e2;color:#b91c1c}.tag.cyan{background:#cffafe;color:#0e7490}
+.module-card{position:relative;overflow:hidden;min-height:204px}
+.icon{
+  width:52px;height:52px;border-radius:17px;display:grid;place-items:center;
+  color:#fff;font-weight:950;margin-bottom:16px;
+}
+.bg-blue .icon{background:linear-gradient(135deg,#2563eb,#38bdf8)}
+.bg-green .icon{background:linear-gradient(135deg,#16a34a,#4ade80)}
+.bg-orange .icon{background:linear-gradient(135deg,#f97316,#facc15)}
+.bg-purple .icon{background:linear-gradient(135deg,#7c3aed,#c084fc)}
+.bg-red .icon{background:linear-gradient(135deg,#dc2626,#fb7185)}
+.bg-cyan .icon{background:linear-gradient(135deg,#0891b2,#22d3ee)}
+.bg-navy .icon{background:linear-gradient(135deg,#071b33,#2563eb)}
+.bg-slate .icon{background:linear-gradient(135deg,#334155,#94a3b8)}
+.notice{border:1px solid #bfdbfe;background:#eff6ff;border-radius:20px;padding:18px 20px;color:#1e3a8a}
+.page-hero{
+  color:#fff;background:
+  radial-gradient(circle at 80% 10%,rgba(56,189,248,.18),transparent 26%),
+  linear-gradient(135deg,#071b33,#0f2d52);
+}
+.page-hero .main{padding-top:42px;padding-bottom:42px}
+.page-hero h1{color:#fff;font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}
+.page-hero p{color:rgba(255,255,255,.78);margin:0;max-width:840px}
+.back-link{display:inline-flex;margin-bottom:18px;color:rgba(255,255,255,.83);font-weight:850}
+.search-box{
+  width:100%;padding:15px 18px;border-radius:18px;border:1px solid var(--line);
+  background:#fff;font:inherit;box-shadow:0 12px 30px rgba(7,27,51,.08);outline:none
+}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 30px rgba(7,27,51,.08)}
+table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{text-align:left;padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f8fbff;color:var(--navy);font-size:14px}
+td{color:#475569}
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.checklist li{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 14px;color:#475569}
+.script-box{
+  background:#071b33;color:#dbeafe;border-radius:18px;padding:18px;white-space:pre-wrap;
+  overflow:auto;font-family:Consolas,monospace;font-size:14px;line-height:1.7
+}
+.quiz-question{display:grid;gap:10px;margin:18px 0}
+.quiz-question label{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 15px;cursor:pointer}
+.progress-bar{height:12px;border-radius:999px;background:#dde7f5;overflow:hidden;margin-top:12px}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#2563eb,#16a34a);transition:.25s ease}
+.footer{background:#071b33;color:#8fa3bd;text-align:center;padding:34px 22px}.footer strong{color:#fff}
+@media(max-width:980px){
+  .hero-inner,.path-wrap{grid-template-columns:1fr}
+  .grid-4,.grid-3,.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .menu-btn{display:inline-flex}
+  .nav-links{display:none;position:absolute;left:16px;right:16px;top:72px;padding:12px;background:#071b33;border:1px solid rgba(255,255,255,.12);border-radius:20px;box-shadow:var(--shadow)}
+  .nav-links.open{display:grid}
+}
+@media(max-width:640px){
+  .grid-4,.grid-3,.grid-2,.panel-grid{grid-template-columns:1fr}
+  .section-head{display:block}.timeline-item{grid-template-columns:1fr}
+  .nav{padding:13px 16px}
+}
+</style>
 </head>
-<body data-progress-key="wingshung-sales-sop.html">
-<header class="site-header"><nav class="nav">
-  <a class="brand" href="../index.html"><span class="logo-mark">W</span><span>Wingshung Learning Center</span></a>
-  <button class="menu-btn" aria-expanded="false">菜单</button>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="logo-mark">W</span><span>Wingshung Learning Center</span></a>
+  <button class="menu-btn" type="button">菜单</button>
   <div class="nav-links">
     <a href="onboarding.html">新人路径</a>
     <a href="company.html">公司介绍</a>
@@ -23,19 +182,75 @@
     <a href="templates.html">模板</a>
     <a href="exam.html">考核</a>
   </div>
-</nav></header>
+</nav>
+</header>
+
 <section class="page-hero">
   <div class="main">
-    <a class="back-link" href="../index.html">← 返回首页</a>
-    <h1>外贸业务SOP</h1>
-    <p>用S1-S5阶段管理客户，从新询盘到订单推进，每一步都有明确动作。</p>
+    <a class="back-link" href="index.html">← 返回首页</a>
+    <h1>报价与跟进话术库</h1>
+    <p>这里存放新人可直接复制的英文话术，用于询盘首回、报价后跟进、嫌贵处理、MOQ解释和样品推进。</p>
   </div>
 </section>
+
 <main class="main">
-<section class="section"><div class="table-wrap"><table><thead><tr><th>阶段</th><th>客户状态</th><th>新人动作</th><th>输出结果</th></tr></thead><tbody><tr><td><strong>S1 新询盘</strong></td><td>客户刚咨询产品或发来需求</td><td>判断客户类型，确认数量、国家、用途、定制、交期</td><td>完成客户基础信息表</td></tr><tr><td><strong>S2 需求确认</strong></td><td>客户有明确产品方向</td><td>补齐规格、包装、Logo、预算、目标价格</td><td>形成可报价需求</td></tr><tr><td><strong>S3 报价阶段</strong></td><td>已给价格或方案</td><td>解释价格组成，给可选配置，确认反馈时间</td><td>报价单+跟进计划</td></tr><tr><td><strong>S4 样品/打样</strong></td><td>客户考虑样品、Logo或包装</td><td>确认样品费、快递费、设计稿、打样周期</td><td>推进付款或打样确认</td></tr><tr><td><strong>S5 订单推进</strong></td><td>客户准备下单或内部确认</td><td>确认PI、付款、交期、生产资料、物流方式</td><td>进入订单执行</td></tr></tbody></table></div></section>
-<section class="section grid grid-2"><div class="card"><h3>新人每日跟进动作</h3><ul><li>查看新询盘和未回复客户</li><li>更新客户阶段：S1-S5</li><li>标记P0/A+/已读未回/报价后中断</li><li>记录下一步动作和时间点</li><li>重要客户提交主管复盘</li></ul></div><div class="card"><h3>不能只做的事</h3><ul><li>不能只发目录，不问客户项目</li><li>不能只报价，不解释配置差异</li><li>不能客户嫌贵就结束</li><li>不能不记录客户预算和交期</li><li>不能把所有客户用同一句话术跟进</li></ul></div></section>
+<section class="section grid grid-2">
+  <div class="card"><span class="tag">First Reply</span><h3>新询盘第一轮回复</h3><div class="script-box" id="script1">Hi, thanks for your inquiry.
+
+To recommend the most suitable solution, may I confirm:
+1. What quantity do you need for the first order?
+2. Do you need customized logo or packaging?
+3. Which country should we ship to?
+4. Is this for retail, promotion, gift project or brand sales?
+
+After confirming these details, we can offer you a more accurate quotation.</div><br><button class="btn btn-outline" data-copy="#script1">复制话术</button></div>
+  <div class="card"><span class="tag orange">Price Follow-up</span><h3>报价后跟进</h3><div class="script-box" id="script2">Hi, just checking if you had a chance to review our quotation.
+
+If the current price is above your target, we can also adjust the set combination, packaging or material to match your budget. Please let me know your target price range, then I can suggest a better option.</div><br><button class="btn btn-outline" data-copy="#script2">复制话术</button></div>
+  <div class="card"><span class="tag red">Too Expensive</span><h3>客户嫌贵处理</h3><div class="script-box" id="script3">I understand your concern about the price.
+
+This quotation is based on customized packaging and the current set configuration. If your project has a fixed budget, we can provide 2 alternative options:
+Option A: keep the main items and simplify packaging.
+Option B: adjust the set quantity or material to reduce cost.
+
+May I know your target price? I will check the best workable solution for you.</div><br><button class="btn btn-outline" data-copy="#script3">复制话术</button></div>
+  <div class="card"><span class="tag green">Sample</span><h3>样品推进</h3><div class="script-box" id="script4">For sample order, we can prepare the available sample first so you can check the quality and details.
+
+If you need logo or customized packaging, we can arrange a pre-production sample after confirming the artwork and sample fee.</div><br><button class="btn btn-outline" data-copy="#script4">复制话术</button></div>
+</section>
+<section class="section"><div class="notice">新人提醒：话术不是复制完就结束。每次发送前要替换产品、数量、国家、包装、预算和交期信息。</div></section>
 </main>
-<footer class="footer"><strong>Wingshung Learning Center</strong><br>Internal training website for new employees.</footer>
-<script src="../js/main.js"></script>
+<footer class="footer"><strong>Wingshung Learning Center</strong><br>Internal training website for new employees. Flat V3 for GitHub Pages.</footer>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var btn=document.querySelector(".menu-btn"),links=document.querySelector(".nav-links");
+  if(btn&&links){btn.addEventListener("click",function(){links.classList.toggle("open")})}
+  var current=location.pathname.split("/").pop()||"index.html";
+  document.querySelectorAll(".nav-links a").forEach(function(a){if(a.getAttribute("href")===current){a.classList.add("active")}});
+  var search=document.querySelector("[data-search]");
+  if(search){
+    var cards=document.querySelectorAll("[data-search-card]");
+    search.addEventListener("input",function(){
+      var k=search.value.trim().toLowerCase();
+      cards.forEach(function(card){card.style.display=card.innerText.toLowerCase().includes(k)?"":"none"});
+    });
+  }
+  document.querySelectorAll("[data-copy]").forEach(function(button){
+    button.addEventListener("click",async function(){
+      var target=document.querySelector(button.dataset.copy); if(!target)return;
+      try{await navigator.clipboard.writeText(target.innerText);var old=button.innerText;button.innerText="已复制";setTimeout(function(){button.innerText=old},1400)}
+      catch(e){alert("请手动复制话术。")}
+    });
+  });
+  var quiz=document.querySelector("[data-quiz-submit]");
+  if(quiz){
+    quiz.addEventListener("click",function(){
+      var qs=document.querySelectorAll("[data-question]"),score=0;
+      qs.forEach(function(q){var s=q.querySelector("input:checked"); if(s&&s.value===q.dataset.correct)score++});
+      document.querySelector("[data-quiz-result]").innerHTML="<strong>测试结果：</strong>"+score+"/"+qs.length+" 题正确。"+(score>=4?"可以进入实操任务。":"建议重新学习产品、客户和报价模块。");
+    });
+  }
+});
+</script>
 </body>
 </html>
