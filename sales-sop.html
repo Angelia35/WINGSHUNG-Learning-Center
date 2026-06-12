@@ -1,181 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>外贸业务SOP</title>
-<style>
-:root{
-  --navy:#071b33;--navy2:#0f2d52;--blue:#2563eb;--cyan:#06b6d4;
-  --green:#16a34a;--orange:#f97316;--purple:#7c3aed;--red:#dc2626;
-  --slate:#334155;--muted:#64748b;--line:#dbe3ef;--white:#fff;
-  --shadow:0 22px 65px rgba(7,27,51,.12);--radius:22px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;
-  background:linear-gradient(180deg,#f7faff 0%,#eef3f9 100%);
-  color:var(--slate);line-height:1.7;
-}
-a{text-decoration:none;color:inherit}
-.site-header{
-  position:sticky;top:0;z-index:20;background:rgba(7,27,51,.96);
-  backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);
-}
-.nav{
-  max-width:1240px;margin:0 auto;padding:14px 22px;
-  display:flex;align-items:center;justify-content:space-between;gap:18px;
-}
-.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:900}
-.logo-mark{
-  width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
-  background:linear-gradient(135deg,#60a5fa,#22d3ee);color:#071b33;font-weight:950;
-}
-.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
-.nav-links a{color:rgba(255,255,255,.78);font-size:14px;padding:8px 11px;border-radius:999px}
-.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
-.menu-btn{
-  display:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);
-  color:#fff;border-radius:12px;padding:8px 11px;cursor:pointer
-}
-.hero{
-  position:relative;overflow:hidden;color:#fff;background:
-    radial-gradient(circle at 16% 24%,rgba(56,189,248,.33),transparent 26%),
-    radial-gradient(circle at 88% 12%,rgba(124,58,237,.26),transparent 28%),
-    linear-gradient(135deg,#071b33 0%,#0f2d52 48%,#10203f 100%);
-}
-.hero:before{
-  content:"";position:absolute;inset:0;background-image:
-    linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
-  background-size:44px 44px;
-}
-.hero-inner{
-  position:relative;max-width:1240px;margin:0 auto;padding:82px 22px 58px;
-  display:grid;grid-template-columns:1.08fr .92fr;gap:32px;align-items:center;
-}
-.eyebrow{
-  display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.88);font-size:13px;font-weight:700;
-}
-h1,h2,h3{margin:0 0 14px;line-height:1.18;color:var(--navy)}
-.hero h1{font-size:clamp(40px,5.2vw,68px);color:#fff;letter-spacing:-.07em;margin-top:16px;margin-bottom:18px}
-.hero p{font-size:18px;color:rgba(255,255,255,.80);max-width:780px;margin:0 0 28px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
-  border-radius:14px;padding:11px 16px;font-weight:850;font-size:14px;border:1px solid transparent;cursor:pointer
-}
-.btn-primary{background:linear-gradient(135deg,#2563eb,#06b6d4);color:#fff;box-shadow:0 18px 38px rgba(37,99,235,.25)}
-.btn-light{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.10);color:#fff}
-.btn-outline{background:#fff;color:var(--blue);border-color:#cfe0ff}
-.hero-panel{
-  border-radius:30px;padding:22px;background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 80px rgba(0,0,0,.24);
-}
-.panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.mini-stat{padding:18px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.13)}
-.mini-stat strong{display:block;color:#fff;font-size:28px;line-height:1.1}
-.mini-stat span{font-size:13px;color:rgba(255,255,255,.75)}
-.main{max-width:1240px;margin:0 auto;padding:46px 22px 80px}
-.section{margin:0 0 44px}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:20px}
-.section-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:900;margin-bottom:8px}
-.section-head p{margin:0;color:var(--muted);max-width:760px}
-.grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.card{
-  background:rgba(255,255,255,.96);border:1px solid rgba(219,227,239,.92);
-  border-radius:var(--radius);padding:24px;box-shadow:0 12px 30px rgba(7,27,51,.08);
-}
-.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);transition:.2s ease}
-.card p{margin:0;color:var(--muted)}
-.path-wrap{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px;align-items:start}
-.path-aside{background:linear-gradient(145deg,#071b33,#0f2d52);color:#fff;border-radius:28px;padding:26px;box-shadow:var(--shadow)}
-.path-aside h3{color:#fff}.path-aside p{color:rgba(255,255,255,.74);margin:0}
-.timeline{display:grid;gap:14px}
-.timeline-item{
-  display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:start;
-  padding:18px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(7,27,51,.08);
-}
-.day{
-  width:62px;height:62px;border-radius:20px;display:grid;place-items:center;
-  color:#fff;background:linear-gradient(135deg,#2563eb,#06b6d4);font-weight:950;
-}
-.tag{
-  display:inline-flex;border-radius:999px;padding:5px 10px;font-size:12px;
-  font-weight:900;background:#e8f0ff;color:#1d4ed8;margin-bottom:10px;
-}
-.tag.green{background:#dcfce7;color:#15803d}.tag.orange{background:#ffedd5;color:#c2410c}.tag.purple{background:#ede9fe;color:#6d28d9}
-.tag.red{background:#fee2e2;color:#b91c1c}.tag.cyan{background:#cffafe;color:#0e7490}
-.module-card{position:relative;overflow:hidden;min-height:204px}
-.icon{
-  width:52px;height:52px;border-radius:17px;display:grid;place-items:center;
-  color:#fff;font-weight:950;margin-bottom:16px;
-}
-.bg-blue .icon{background:linear-gradient(135deg,#2563eb,#38bdf8)}
-.bg-green .icon{background:linear-gradient(135deg,#16a34a,#4ade80)}
-.bg-orange .icon{background:linear-gradient(135deg,#f97316,#facc15)}
-.bg-purple .icon{background:linear-gradient(135deg,#7c3aed,#c084fc)}
-.bg-red .icon{background:linear-gradient(135deg,#dc2626,#fb7185)}
-.bg-cyan .icon{background:linear-gradient(135deg,#0891b2,#22d3ee)}
-.bg-navy .icon{background:linear-gradient(135deg,#071b33,#2563eb)}
-.bg-slate .icon{background:linear-gradient(135deg,#334155,#94a3b8)}
-.notice{border:1px solid #bfdbfe;background:#eff6ff;border-radius:20px;padding:18px 20px;color:#1e3a8a}
-.page-hero{
-  color:#fff;background:
-  radial-gradient(circle at 80% 10%,rgba(56,189,248,.18),transparent 26%),
-  linear-gradient(135deg,#071b33,#0f2d52);
-}
-.page-hero .main{padding-top:42px;padding-bottom:42px}
-.page-hero h1{color:#fff;font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}
-.page-hero p{color:rgba(255,255,255,.78);margin:0;max-width:840px}
-.back-link{display:inline-flex;margin-bottom:18px;color:rgba(255,255,255,.83);font-weight:850}
-.search-box{
-  width:100%;padding:15px 18px;border-radius:18px;border:1px solid var(--line);
-  background:#fff;font:inherit;box-shadow:0 12px 30px rgba(7,27,51,.08);outline:none
-}
-.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 30px rgba(7,27,51,.08)}
-table{width:100%;border-collapse:collapse;min-width:760px}
-th,td{text-align:left;padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-th{background:#f8fbff;color:var(--navy);font-size:14px}
-td{color:#475569}
-.checklist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.checklist li{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 14px;color:#475569}
-.script-box{
-  background:#071b33;color:#dbeafe;border-radius:18px;padding:18px;white-space:pre-wrap;
-  overflow:auto;font-family:Consolas,monospace;font-size:14px;line-height:1.7
-}
-.quiz-question{display:grid;gap:10px;margin:18px 0}
-.quiz-question label{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 15px;cursor:pointer}
-.progress-bar{height:12px;border-radius:999px;background:#dde7f5;overflow:hidden;margin-top:12px}
-.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#2563eb,#16a34a);transition:.25s ease}
-.footer{background:#071b33;color:#8fa3bd;text-align:center;padding:34px 22px}.footer strong{color:#fff}
-@media(max-width:980px){
-  .hero-inner,.path-wrap{grid-template-columns:1fr}
-  .grid-4,.grid-3,.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .menu-btn{display:inline-flex}
-  .nav-links{display:none;position:absolute;left:16px;right:16px;top:72px;padding:12px;background:#071b33;border:1px solid rgba(255,255,255,.12);border-radius:20px;box-shadow:var(--shadow)}
-  .nav-links.open{display:grid}
-}
-@media(max-width:640px){
-  .grid-4,.grid-3,.grid-2,.panel-grid{grid-template-columns:1fr}
-  .section-head{display:block}.timeline-item{grid-template-columns:1fr}
-  .nav{padding:13px 16px}
-}
-</style>
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>外贸业务SOP</title><style>
+:root{--navy:#071b33;--blue:#2563eb;--cyan:#06b6d4;--green:#16a34a;--orange:#f97316;--purple:#7c3aed;--red:#dc2626;--slate:#334155;--muted:#64748b;--line:#dbe3ef;--shadow:0 22px 65px rgba(7,27,51,.12);--radius:22px}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:linear-gradient(180deg,#f7faff 0%,#eef3f9 100%);color:var(--slate);line-height:1.7}a{text-decoration:none;color:inherit}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(7,27,51,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{max-width:1240px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:900}
+.logo-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#60a5fa,#22d3ee);color:#071b33;font-weight:950}
+.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap}.nav-links a{color:rgba(255,255,255,.78);font-size:14px;padding:8px 11px;border-radius:999px}.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.page-hero{color:#fff;background:radial-gradient(circle at 80% 10%,rgba(56,189,248,.18),transparent 26%),linear-gradient(135deg,#071b33,#0f2d52)}.page-hero .main{padding-top:42px;padding-bottom:42px}.page-hero h1{color:#fff;font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}.page-hero p{color:rgba(255,255,255,.78);margin:0;max-width:840px}.back-link{display:inline-flex;margin-bottom:18px;color:rgba(255,255,255,.83);font-weight:850}
+.main{max-width:1240px;margin:0 auto;padding:46px 22px 80px}.section{margin:0 0 44px}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:20px}.section-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:900;margin-bottom:8px}.section-head p{margin:0;color:var(--muted);max-width:760px}
+h1,h2,h3{margin:0 0 14px;line-height:1.18;color:var(--navy)}.grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:rgba(255,255,255,.96);border:1px solid rgba(219,227,239,.92);border-radius:var(--radius);padding:24px;box-shadow:0 12px 30px rgba(7,27,51,.08)}.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);transition:.2s ease}.card p{margin:0;color:var(--muted)}
+.tag{display:inline-flex;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:900;background:#e8f0ff;color:#1d4ed8;margin-bottom:10px}.tag.green{background:#dcfce7;color:#15803d}.tag.orange{background:#ffedd5;color:#c2410c}.tag.purple{background:#ede9fe;color:#6d28d9}.tag.red{background:#fee2e2;color:#b91c1c}.tag.cyan{background:#cffafe;color:#0e7490}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:14px;padding:11px 16px;font-weight:850;font-size:14px;border:1px solid transparent;cursor:pointer}.btn-primary{background:linear-gradient(135deg,#2563eb,#06b6d4);color:#fff;box-shadow:0 18px 38px rgba(37,99,235,.25)}.btn-outline{background:#fff;color:var(--blue);border-color:#cfe0ff}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 30px rgba(7,27,51,.08)}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f8fbff;color:var(--navy);font-size:14px}td{color:#475569}
+.script-box{background:#071b33;color:#dbeafe;border-radius:18px;padding:18px;white-space:pre-wrap;overflow:auto;font-family:Consolas,monospace;font-size:14px;line-height:1.7}.notice{border:1px solid #bfdbfe;background:#eff6ff;border-radius:20px;padding:18px 20px;color:#1e3a8a}.footer{background:#071b33;color:#8fa3bd;text-align:center;padding:34px 22px}.footer strong{color:#fff}
+@media(max-width:980px){.grid-4,.grid-3,.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{display:block}}@media(max-width:640px){.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}}
+</style></head>
 <body>
 <header class="site-header">
 <nav class="nav">
   <a class="brand" href="index.html"><span class="logo-mark">W</span><span>Wingshung Learning Center</span></a>
-  <button class="menu-btn" type="button">菜单</button>
   <div class="nav-links">
     <a href="onboarding.html">新人路径</a>
     <a href="company.html">公司介绍</a>
     <a href="products.html">产品知识</a>
     <a href="customers.html">客户判断</a>
-    <a href="sales-sop.html">业务SOP</a>
+    <a href="sales-sop.html" class="active">业务SOP</a>
     <a href="scripts.html">话术库</a>
     <a href="cases.html">案例库</a>
     <a href="alibaba-basic.html">阿里基础</a>
@@ -184,50 +35,159 @@ td{color:#475569}
   </div>
 </nav>
 </header>
+<section class="page-hero"><div class="main"><a class="back-link" href="index.html">← 返回首页</a><h1>外贸业务SOP</h1><p>根据新人业务员询盘跟进 SOP 整合，覆盖 S1-S5 客户阶段、客户背调、需求确认、报价跟进、谈判成交与客户沉淀。</p></div></section>
 
-<section class="page-hero">
-  <div class="main">
-    <a class="back-link" href="index.html">← 返回首页</a>
-    <h1>外贸业务SOP</h1>
-    <p>用S1-S5阶段管理客户，从新询盘到订单推进，每一步都有明确动作。</p>
+<main class="main">
+<section class="section">
+  <div class="section-head">
+    <div><div class="section-kicker">SOP Goal</div><h2>新人业务员询盘跟进 SOP 总目标</h2><p>收到询盘后，按照标准流程完成客户判断、需求确认、方案推荐、报价推进、谈判成交和后续沉淀。</p></div>
+    <a class="btn btn-outline" href="new-sales-inquiry-follow-up-sop.docx" target="_blank">下载完整 Word SOP</a>
+  </div>
+  <div class="grid grid-4">
+    <div class="card"><span class="tag">01</span><h3>先判断客户</h3><p>不盲目报价，先判断客户质量和真实需求。</p></div>
+    <div class="card"><span class="tag green">02</span><h3>先看客户是谁</h3><p>判断客户是谁、想买什么、什么时候买、预算是否匹配。</p></div>
+    <div class="card"><span class="tag orange">03</span><h3>S1-S5 管理</h3><p>用阶段化方式提高跟进效率和成交转化率。</p></div>
+    <div class="card"><span class="tag purple">04</span><h3>减少报价后中断</h3><p>帮助新人避免“报价完就死”的问题。</p></div>
   </div>
 </section>
 
-<main class="main">
-<section class="section"><div class="table-wrap"><table><thead><tr><th>阶段</th><th>客户状态</th><th>新人动作</th><th>输出结果</th></tr></thead><tbody><tr><td><strong>S1 新询盘</strong></td><td>客户刚咨询产品或发来需求</td><td>判断客户类型，确认数量、国家、用途、定制、交期</td><td>完成客户基础信息表</td></tr><tr><td><strong>S2 需求确认</strong></td><td>客户有明确产品方向</td><td>补齐规格、包装、Logo、预算、目标价格</td><td>形成可报价需求</td></tr><tr><td><strong>S3 报价阶段</strong></td><td>已给价格或方案</td><td>解释价格组成，给可选配置，确认反馈时间</td><td>报价单+跟进计划</td></tr><tr><td><strong>S4 样品/打样</strong></td><td>客户考虑样品、Logo或包装</td><td>确认样品费、快递费、设计稿、打样周期</td><td>推进付款或打样确认</td></tr><tr><td><strong>S5 订单推进</strong></td><td>客户准备下单或内部确认</td><td>确认PI、付款、交期、生产资料、物流方式</td><td>进入订单执行</td></tr></tbody></table></div></section>
-<section class="section grid grid-2"><div class="card"><h3>新人每日跟进动作</h3><ul><li>查看新询盘和未回复客户</li><li>更新客户阶段：S1-S5</li><li>标记P0/A+/已读未回/报价后中断</li><li>记录下一步动作和时间点</li><li>重要客户提交主管复盘</li></ul></div><div class="card"><h3>不能只做的事</h3><ul><li>不能只发目录，不问客户项目</li><li>不能只报价，不解释配置差异</li><li>不能客户嫌贵就结束</li><li>不能不记录客户预算和交期</li><li>不能把所有客户用同一句话术跟进</li></ul></div></section>
+<section class="section">
+  <div class="section-head"><div><div class="section-kicker">Customer Stage</div><h2>客户阶段判定标准</h2><p>每个客户都必须被放进一个阶段，否则后续跟进会混乱。</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th>阶段</th><th>客户状态</th><th>业务动作</th><th>新人判断重点</th></tr></thead><tbody>
+    <tr><td><strong>S1 新询盘</strong></td><td>客户信息和需求不清楚</td><td>背调客户，确认需求、数量、预算、时间线</td><td>客户是谁？是否值得重点跟进？</td></tr>
+    <tr><td><strong>S2 需求明确</strong></td><td>需求基本明确，但方案未确定</td><td>推荐产品和方案，确认配置、包装、MOQ</td><td>是否能形成清晰报价需求？</td></tr>
+    <tr><td><strong>S3 已报价</strong></td><td>已报价，等待客户反馈</td><td>跟进报价，确认预算差距，推动样品</td><td>价格是否匹配？客户是否愿意进入下一步？</td></tr>
+    <tr><td><strong>S4 有卡点</strong></td><td>客户有兴趣但存在价格/MOQ/交期/包装等卡点</td><td>给替代方案，解决卡点，推动内部确认</td><td>能不能换配置、换包装、拆方案？</td></tr>
+    <tr><td><strong>S5 成交/高确定</strong></td><td>已成交或高度确定成交</td><td>推进 PI、付款、生产、复购沉淀</td><td>资料是否完整？复购时间是否记录？</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="section grid grid-2">
+  <div class="card"><span class="tag">S1</span><h3>S1：客户初步识别与需求判断</h3><p>S1 不是立刻报价，而是先判断客户是否值得重点跟进。</p><ul><li>客户是谁？</li><li>客户是做什么的？</li><li>客户要什么？</li><li>客户有没有成交可能？</li></ul></div>
+  <div class="card"><span class="tag green">Research</span><h3>客户背景调查渠道</h3><ul><li>阿里客户资料页、客户邮箱后缀</li><li>Google 搜索公司名称、公司官网</li><li>LinkedIn、Facebook、Instagram</li><li>客户国家、主营市场、品牌/门店/社媒</li></ul></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="section-kicker">Customer Type</div><h2>客户类型判断表</h2><p>不同客户类型，问法和跟进重点不一样。</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th>客户类型</th><th>判断重点</th><th>跟进方向</th></tr></thead><tbody>
+    <tr><td>零售商 Retailer</td><td>有线下门店、超市、礼品店</td><td>重点问销售渠道、采购数量、包装需求</td></tr>
+    <tr><td>品牌商 Brand Owner</td><td>有自有品牌、Logo、官网</td><td>重点问定制需求、包装、长期采购计划</td></tr>
+    <tr><td>批发商 Wholesaler</td><td>产品种类多，面向 B 端客户</td><td>重点问价格、MOQ、热销款、交期</td></tr>
+    <tr><td>电商卖家 E-commerce Seller</td><td>Amazon / eBay / 独立站销售</td><td>重点问 SKU、包装、条码、物流需求</td></tr>
+    <tr><td>贸易公司 Trading Company</td><td>产品需求不固定，比价明显</td><td>重点问目标价、终端客户需求、项目进度</td></tr>
+    <tr><td>礼品公司 Gift Company</td><td>节日、活动、企业礼品需求</td><td>重点问活动时间、定制 Logo、包装预算</td></tr>
+    <tr><td>工程/项目客户 Project Buyer</td><td>有明确项目或招标需求</td><td>重点问交期、认证、付款、方案细节</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="section grid grid-2">
+  <div class="card"><span class="tag purple">Decision Maker</span><h3>客户职位与决策权判断</h3><ul><li>Owner / Founder / CEO：决策权高，可直接推进方案和价格。</li><li>Purchasing Manager：决策权高，重点突出价格、交期、稳定供货。</li><li>Product Manager：中高决策权，重点突出产品方案、配置、包装。</li><li>Designer / Marketing：中等决策权，重点配合设计、包装、视觉方案。</li><li>Assistant / Intern：决策权低，需要引导其转给采购或老板确认。</li></ul></div>
+  <div class="card"><span class="tag green">Key Questions</span><h3>S1 阶段英文判断问题</h3><div class="script-box" id="s1q">May I know if you are purchasing for your own brand or for your client?
+
+Are you the person in charge of this purchasing project?
+
+Will your team make the final decision this week?
+
+Is this order for retail, wholesale, promotional gift, or online selling?</div><br><button class="btn btn-outline" data-copy="#s1q">复制问题</button></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="section-kicker">Must Ask</div><h2>S1 阶段必问问题</h2><p>新人不能只问数量，要围绕成交判断问问题。</p></div></div>
+  <div class="grid grid-4">
+    <div class="card"><span class="tag">需求</span><h3>客户要什么？</h3><p>产品、现有款/定制款、Logo、包装、样品、目标市场、使用场景。</p></div>
+    <div class="card"><span class="tag green">数量</span><h3>采购量是多少？</h3><p>预计订单数量、是否接受 MOQ、是否先做样品、后续是否复购。</p></div>
+    <div class="card"><span class="tag orange">时间线</span><h3>什么时候要？</h3><p>样品时间、订单确认时间、出货时间、活动/节日/项目 deadline。</p></div>
+    <div class="card"><span class="tag purple">预算</span><h3>目标价是多少？</h3><p>目标价、市场价、价格区间、关注价格还是品质/包装/交期。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="section-kicker">Timeline & Budget</div><h2>时间线与预算判断</h2><p>时间线决定跟进节奏，预算决定方案方向。</p></div></div>
+  <div class="grid grid-2">
+    <div class="table-wrap"><table><thead><tr><th>客户时间线</th><th>成交可能性</th><th>跟进节奏</th></tr></thead><tbody><tr><td>7-15 天内要样品/报价</td><td>高</td><td>当天重点跟进</td></tr><tr><td>30 天内确认订单</td><td>高</td><td>每 2-3 天推进一次</td></tr><tr><td>1-2 个月后采购</td><td>中</td><td>每周跟进，持续种草</td></tr><tr><td>只是看看价格</td><td>低</td><td>标准报价，降低跟进频率</td></tr><tr><td>无明确时间</td><td>低中</td><td>继续挖需求和预算</td></tr></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>价格差距</th><th>判断</th><th>处理方式</th></tr></thead><tbody><tr><td>5% 以内</td><td>高成交可能</td><td>正常报价，推动样品或设计确认</td></tr><tr><td>5%-10%</td><td>可谈判</td><td>解释优势，适当优化方案</td></tr><tr><td>10%-20%</td><td>需要调整配置</td><td>换材质、减配件、改包装、做基础款</td></tr><tr><td>20% 以上</td><td>差距较大</td><td>换方案或降低跟进优先级</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section class="section grid grid-2">
+  <div class="card"><span class="tag orange">S2</span><h3>S2：需求确认与方案推荐</h3><p>把客户需求从“模糊询问”变成“明确采购需求”。</p><ul><li>确认产品款式、数量、Logo/包装</li><li>确认材质/配置、目标价、交期、运输国家</li><li>输出推荐产品、推荐理由、配置说明、包装方案、MOQ、样品方案和下一步动作</li></ul></div>
+  <div class="card"><span class="tag cyan">S3</span><h3>S3：报价与样品推进</h3><p>报价不能只发一个价格，必须包含完整信息。</p><ul><li>产品图片、产品名称、规格/材质、数量、单价</li><li>包装方式、Logo 费用、样品费用、生产时间</li><li>付款方式、报价有效期、下一步样品/订单动作</li></ul></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="section-kicker">Follow-up Rhythm</div><h2>报价后跟进节奏</h2><p>报价后不能等客户自然回复，需要主动推进。</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th>时间</th><th>跟进动作</th><th>建议话术方向</th></tr></thead><tbody><tr><td>报价当天</td><td>确认客户是否收到报价</td><td>确认是否收到文件，提醒可调整方案</td></tr><tr><td>第 2 天</td><td>询问价格/方案是否符合预算</td><td>询问预算差距和目标价</td></tr><tr><td>第 3-4 天</td><td>提供替代方案或优化方案</td><td>给基础款/升级款双方案</td></tr><tr><td>第 5-7 天</td><td>推动样品或确认订单时间</td><td>确认是否需要样品、PI 或设计稿</td></tr><tr><td>第 7 天后</td><td>降低频率，转入长期跟进</td><td>围绕新品、案例、季节节点持续触达</td></tr></tbody></table></div>
+</section>
+
+<section class="section grid grid-2">
+  <div class="card"><span class="tag red">S4</span><h3>S4：谈判与订单推进</h3><p>解决客户下单前的最后顾虑。</p><ul><li>价格高：换配置、换材质、提高数量、提供基础款</li><li>MOQ 高：先做样品，或推荐标准包装方案</li><li>运费高：提供不同运输方式</li><li>交期紧：推荐现有款、标准款、简化包装</li><li>老板未批准：提供对比表和优势总结</li></ul></div>
+  <div class="card"><span class="tag green">S5</span><h3>S5：成交、复盘与客户沉淀</h3><p>S5 不是订单结束，而是客户复购和沉淀的开始。</p><ul><li>PI 确认、付款跟进、设计稿确认</li><li>样品/大货进度、出货跟进、售后反馈</li><li>复购提醒、客户资料归档、下次跟进时间</li></ul></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="section-kicker">Daily Checklist</div><h2>新人业务员每日执行清单</h2><p>每天都要有明确动作，不能只看消息不推进。</p></div></div>
+  <div class="grid grid-3">
+    <div class="card"><span class="tag">上午</span><h3>新客户处理</h3><ul><li>查看所有新询盘</li><li>给每个新客户做 S1 初步判断</li><li>查询客户公司背景</li><li>标注客户类型和国家</li><li>回复客户第一封信息</li></ul></div>
+    <div class="card"><span class="tag orange">下午</span><h3>推进重点客户</h3><ul><li>跟进已报价客户</li><li>检查 S2/S3 客户是否有新反馈</li><li>给重点客户补充方案</li><li>推进样品/报价/设计确认</li><li>更新客户阶段表</li></ul></div>
+    <div class="card"><span class="tag purple">下班前</span><h3>复盘与计划</h3><ul><li>更新客户跟进记录</li><li>标记明天必须跟进的客户</li><li>标记高潜客户</li><li>复盘当天报价客户</li><li>记录客户卡点和下一步动作</li></ul></div>
+  </div>
+</section>
+
+<section class="section grid grid-3">
+  <div class="card"><span class="tag">Template 1</span><h3>标准询盘回复</h3><div class="script-box" id="reply1">Hi [Name],
+Thanks for your inquiry.
+
+To recommend the most suitable option, may I know more details about your project?
+
+1. What quantity do you need?
+2. Do you need custom logo or packaging?
+3. Is this for retail, wholesale, promotional gift, or your own brand?
+4. Do you have a target delivery date?
+5. Do you have a target price or budget range?
+
+After confirming these details, I can recommend the best solution and quotation for you.
+
+Best regards,
+[Your Name]</div><br><button class="btn btn-outline" data-copy="#reply1">复制话术</button></div>
+  <div class="card"><span class="tag orange">Template 2</span><h3>客户问价格但需求不清楚</h3><div class="script-box" id="reply2">Hi [Name],
+Thanks for your message.
+
+The price depends on quantity, material, logo, and packaging requirements.
+
+May I know your estimated order quantity and whether you need custom logo or color box packaging?
+
+If you have a target price, we can also recommend a suitable solution based on your budget.
+
+Best regards,
+[Your Name]</div><br><button class="btn btn-outline" data-copy="#reply2">复制话术</button></div>
+  <div class="card"><span class="tag red">Template 3</span><h3>客户目标价偏低</h3><div class="script-box" id="reply3">Hi [Name],
+Thanks for sharing your target price.
+
+The current quotation is based on [current material/configuration/packaging]. Your target price is a little different from this solution.
+
+But we can adjust the material, accessories, or packaging to make a more cost-effective option for your market.
+
+Would you like me to prepare two options for you?
+Option A: standard version with better price
+Option B: premium version with better packaging and quality
+
+Best regards,
+[Your Name]</div><br><button class="btn btn-outline" data-copy="#reply3">复制话术</button></div>
+</section>
+
+<section class="section"><div class="notice"><strong>关键原则：</strong>先判断客户，再报价；先问清楚需求，再推荐产品；先确认预算，再决定方案；先确认时间线，再安排跟进节奏；客户嫌贵不等于没机会，要先判断能否换方案；每个客户必须有下一步动作。</div></section>
 </main>
-<footer class="footer"><strong>Wingshung Learning Center</strong><br>Internal training website for new employees. Flat V3 for GitHub Pages.</footer>
+
+<footer class="footer"><strong>Wingshung Learning Center</strong><br>Internal training website for new employees.</footer>
 <script>
 document.addEventListener("DOMContentLoaded",function(){
-  var btn=document.querySelector(".menu-btn"),links=document.querySelector(".nav-links");
-  if(btn&&links){btn.addEventListener("click",function(){links.classList.toggle("open")})}
-  var current=location.pathname.split("/").pop()||"index.html";
-  document.querySelectorAll(".nav-links a").forEach(function(a){if(a.getAttribute("href")===current){a.classList.add("active")}});
-  var search=document.querySelector("[data-search]");
-  if(search){
-    var cards=document.querySelectorAll("[data-search-card]");
-    search.addEventListener("input",function(){
-      var k=search.value.trim().toLowerCase();
-      cards.forEach(function(card){card.style.display=card.innerText.toLowerCase().includes(k)?"":"none"});
-    });
-  }
-  document.querySelectorAll("[data-copy]").forEach(function(button){
-    button.addEventListener("click",async function(){
-      var target=document.querySelector(button.dataset.copy); if(!target)return;
-      try{await navigator.clipboard.writeText(target.innerText);var old=button.innerText;button.innerText="已复制";setTimeout(function(){button.innerText=old},1400)}
-      catch(e){alert("请手动复制话术。")}
-    });
+ document.querySelectorAll("[data-copy]").forEach(function(button){
+  button.addEventListener("click",async function(){
+   var target=document.querySelector(button.dataset.copy); if(!target)return;
+   try{await navigator.clipboard.writeText(target.innerText);var old=button.innerText;button.innerText="已复制";setTimeout(function(){button.innerText=old},1400)}
+   catch(e){alert("请手动复制话术。")}
   });
-  var quiz=document.querySelector("[data-quiz-submit]");
-  if(quiz){
-    quiz.addEventListener("click",function(){
-      var qs=document.querySelectorAll("[data-question]"),score=0;
-      qs.forEach(function(q){var s=q.querySelector("input:checked"); if(s&&s.value===q.dataset.correct)score++});
-      document.querySelector("[data-quiz-result]").innerHTML="<strong>测试结果：</strong>"+score+"/"+qs.length+" 题正确。"+(score>=4?"可以进入实操任务。":"建议重新学习产品、客户和报价模块。");
-    });
-  }
+ });
 });
 </script>
-</body>
-</html>
+</body></html>
