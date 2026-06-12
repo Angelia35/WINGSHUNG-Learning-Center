@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客户案例复盘库 · Wingshung Learning Center</title>
+  <meta name="description" content="用真实业务场景训练新人判断客户状态、卡点原因和下一步动作。">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-progress-key="wingshung-cases.html">
+<header class="site-header">
+
+<nav class="nav">
+  <a class="brand" href="../index.html"><span class="logo-mark">W</span><span>Wingshung Learning Center</span></a>
+  <button class="menu-btn" aria-expanded="false">菜单</button>
+  <div class="nav-links">
+    <a href="onboarding.html">新人路径</a>
+    <a href="company.html">公司介绍</a>
+    <a href="products.html">产品知识</a>
+    <a href="customers.html">客户判断</a>
+    <a href="sales-sop.html">业务SOP</a>
+    <a href="scripts.html">话术库</a>
+    <a href="cases.html">案例库</a>
+    <a href="alibaba-basic.html">阿里基础</a>
+    <a href="templates.html">模板</a>
+    <a href="exam.html">考核</a>
+  </div>
+</nav>
+
+</header>
+
+<section class="page-hero">
+  <div class="main">
+    <div class="back-row"><a class="back-link" href="../index.html">← 返回首页</a></div>
+    <h1>客户案例复盘库</h1>
+    <p>用真实业务场景训练新人判断客户状态、卡点原因和下一步动作。</p>
+  </div>
+</section>
+
+<main class="main">
+
+<section class="section">
+  <input class="search-box" type="search" placeholder="搜索案例：已读未回 / 嫌贵 / 小MOQ / 急单 / 定制包装 / A+客户..." data-search>
+</section>
+
+<section class="section grid grid-3">
+  <div class="card" data-search-card>
+    <span class="tag red">报价后中断</span>
+    <h3>客户已读未回</h3>
+    <p><strong>可能原因：</strong>价格高、内部比较供应商、项目未确定、话术没有给下一步。</p>
+    <p><strong>下一步：</strong>不要只问“any update”，要给降本方案、替代配置和确认时间。</p>
+  </div>
+  <div class="card" data-search-card>
+    <span class="tag amber">嫌贵</span>
+    <h3>客户反馈价格高</h3>
+    <p><strong>可能原因：</strong>客户预算低、配置过高、包装成本高、数量不足。</p>
+    <p><strong>下一步：</strong>给A/B/C三档方案，保留核心产品，简化包装或调整材质。</p>
+  </div>
+  <div class="card" data-search-card>
+    <span class="tag">Small MOQ</span>
+    <h3>客户只要100套</h3>
+    <p><strong>可能原因：</strong>测试市场、预算有限、第一次合作不敢下大单。</p>
+    <p><strong>下一步：</strong>判断是否可走现货/样品/简包装，不要直接拒绝。</p>
+  </div>
+  <div class="card" data-search-card>
+    <span class="tag green">A+客户</span>
+    <h3>客户有明确数量和交期</h3>
+    <p><strong>信号：</strong>提供数量、包装要求、Logo、国家、交期、目标价格。</p>
+    <p><strong>下一步：</strong>快速报价，给时间表，推动样品或PI。</p>
+  </div>
+  <div class="card" data-search-card>
+    <span class="tag amber">证书/合规</span>
+    <h3>客户询问测试和认证</h3>
+    <p><strong>可能原因：</strong>商超、品牌、电商平台或进口合规要求。</p>
+    <p><strong>下一步：</strong>确认市场和标准，不要随意承诺，提交主管或供应链核实。</p>
+  </div>
+  <div class="card" data-search-card>
+    <span class="tag red">急单</span>
+    <h3>客户要求很快交货</h3>
+    <p><strong>可能原因：</strong>促销活动、展会、节日节点、补货。</p>
+    <p><strong>下一步：</strong>先确认是否接受现货/简包装/空运，再评估定制可行性。</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <strong>Wingshung Learning Center</strong><br>
+  Internal training website for new employees.
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

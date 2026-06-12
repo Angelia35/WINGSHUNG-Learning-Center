@@ -1,0 +1,23 @@
+# Wingshung Learning Center
+
+这是一个适合部署到 GitHub Pages 的公司新人学习网站。
+
+## 文件结构
+- index.html：首页
+- pages/：所有子页面
+- css/style.css：统一样式
+- js/main.js：菜单、搜索、进度、测试、复制话术功能
+- assets/files/：后续放 PDF / Word / Excel 资料
+- assets/images/：后续放公司和产品图片
+
+## 部署方式
+1. 新建 GitHub 仓库，例如 wingshung-learning-center
+2. 上传本文件夹内所有文件
+3. 打开仓库 Settings → Pages
+4. Source 选择 Deploy from a branch
+5. Branch 选择 main / root
+6. 保存后等待 GitHub Pages 生成网址
+
+## 替换下载资料
+把真实文件放入 assets/files/，然后在 pages/templates.html 中把按钮 href="#" 改为：
+../assets/files/你的文件名.pdf

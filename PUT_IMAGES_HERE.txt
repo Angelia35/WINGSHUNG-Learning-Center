@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>报价与跟进话术库 · Wingshung Learning Center</title>
+  <meta name="description" content="这里存放新人可直接复制的英文话术，用于询盘首回、报价后跟进、嫌贵处理、MOQ解释和样品推进。">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-progress-key="wingshung-scripts.html">
+<header class="site-header">
+
+<nav class="nav">
+  <a class="brand" href="../index.html"><span class="logo-mark">W</span><span>Wingshung Learning Center</span></a>
+  <button class="menu-btn" aria-expanded="false">菜单</button>
+  <div class="nav-links">
+    <a href="onboarding.html">新人路径</a>
+    <a href="company.html">公司介绍</a>
+    <a href="products.html">产品知识</a>
+    <a href="customers.html">客户判断</a>
+    <a href="sales-sop.html">业务SOP</a>
+    <a href="scripts.html">话术库</a>
+    <a href="cases.html">案例库</a>
+    <a href="alibaba-basic.html">阿里基础</a>
+    <a href="templates.html">模板</a>
+    <a href="exam.html">考核</a>
+  </div>
+</nav>
+
+</header>
+
+<section class="page-hero">
+  <div class="main">
+    <div class="back-row"><a class="back-link" href="../index.html">← 返回首页</a></div>
+    <h1>报价与跟进话术库</h1>
+    <p>这里存放新人可直接复制的英文话术，用于询盘首回、报价后跟进、嫌贵处理、MOQ解释和样品推进。</p>
+  </div>
+</section>
+
+<main class="main">
+
+<section class="section grid grid-2">
+  <div class="card">
+    <span class="tag">First Reply</span>
+    <h3>新询盘第一轮回复</h3>
+    <div class="script-box" id="script1">Hi, thanks for your inquiry.
+
+To recommend the most suitable solution, may I confirm:
+1. What quantity do you need for the first order?
+2. Do you need customized logo or packaging?
+3. Which country should we ship to?
+4. Is this for retail, promotion, gift project or brand sales?
+
+After confirming these details, we can offer you a more accurate quotation.</div>
+    <br><button class="btn btn-outline" data-copy="#script1">复制话术</button>
+  </div>
+  <div class="card">
+    <span class="tag amber">Price Follow-up</span>
+    <h3>报价后跟进</h3>
+    <div class="script-box" id="script2">Hi, just checking if you had a chance to review our quotation.
+
+If the current price is above your target, we can also adjust the set combination, packaging or material to match your budget. Please let me know your target price range, then I can suggest a better option.</div>
+    <br><button class="btn btn-outline" data-copy="#script2">复制话术</button>
+  </div>
+  <div class="card">
+    <span class="tag red">Too Expensive</span>
+    <h3>客户嫌贵处理</h3>
+    <div class="script-box" id="script3">I understand your concern about the price.
+
+This quotation is based on customized packaging and the current set configuration. If your project has a fixed budget, we can provide 2 alternative options:
+Option A: keep the main items and simplify packaging.
+Option B: adjust the set quantity or material to reduce cost.
+
+May I know your target price? I will check the best workable solution for you.</div>
+    <br><button class="btn btn-outline" data-copy="#script3">复制话术</button>
+  </div>
+  <div class="card">
+    <span class="tag green">Sample</span>
+    <h3>样品推进</h3>
+    <div class="script-box" id="script4">For sample order, we can prepare the available sample first so you can check the quality and details.
+
+If you need logo or customized packaging, we can arrange a pre-production sample after confirming the artwork and sample fee.</div>
+    <br><button class="btn btn-outline" data-copy="#script4">复制话术</button>
+  </div>
+</section>
+
+<section class="section">
+  <div class="notice">新人提醒：话术不是复制完就结束。每次发送前要替换产品、数量、国家、包装、预算和交期信息。</div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <strong>Wingshung Learning Center</strong><br>
+  Internal training website for new employees.
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

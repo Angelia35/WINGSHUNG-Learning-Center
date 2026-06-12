@@ -1,0 +1,84 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", navLinks.classList.contains("open"));
+    });
+  }
+
+  const searchInput = document.querySelector("[data-search]");
+  if (searchInput) {
+    const cards = document.querySelectorAll("[data-search-card]");
+    searchInput.addEventListener("input", () => {
+      const keyword = searchInput.value.trim().toLowerCase();
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(keyword) ? "" : "none";
+      });
+    });
+  }
+
+  const checkboxes = document.querySelectorAll("[data-progress-check]");
+  const progressFill = document.querySelector("[data-progress-fill]");
+  const progressText = document.querySelector("[data-progress-text]");
+  const storageKey = document.body.dataset.progressKey || "wingshung-learning-progress";
+
+  function updateProgress() {
+    if (!checkboxes.length || !progressFill) return;
+    const checked = Array.from(checkboxes).filter(item => item.checked).length;
+    const percent = Math.round((checked / checkboxes.length) * 100);
+    progressFill.style.width = percent + "%";
+    if (progressText) progressText.innerText = `${checked}/${checkboxes.length} 已完成 · ${percent}%`;
+    localStorage.setItem(storageKey, JSON.stringify(Array.from(checkboxes).map(item => item.checked)));
+  }
+
+  if (checkboxes.length) {
+    const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+    checkboxes.forEach((item, index) => {
+      item.checked = Boolean(saved[index]);
+      item.addEventListener("change", updateProgress);
+    });
+    updateProgress();
+  }
+
+  const quizBtn = document.querySelector("[data-quiz-submit]");
+  if (quizBtn) {
+    quizBtn.addEventListener("click", () => {
+      const questions = document.querySelectorAll("[data-question]");
+      let score = 0;
+      questions.forEach((question, index) => {
+        const correct = question.dataset.correct;
+        const selected = question.querySelector("input:checked");
+        if (selected && selected.value === correct) score++;
+      });
+      const result = document.querySelector("[data-quiz-result]");
+      if (result) {
+        result.innerHTML = `<strong>测试结果：</strong>${score}/${questions.length} 题正确。${score >= 4 ? "可以进入实操任务。" : "建议重新学习产品、客户和报价模块。"}`;
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-copy]").forEach(button => {
+    button.addEventListener("click", async () => {
+      const target = document.querySelector(button.dataset.copy);
+      if (!target) return;
+      try {
+        await navigator.clipboard.writeText(target.innerText);
+        button.innerText = "已复制";
+        setTimeout(() => button.innerText = "复制话术", 1500);
+      } catch (e) {
+        alert("当前浏览器不支持一键复制，请手动选中文本复制。");
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-template-note]").forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      alert("这里是下载按钮预留位。后续把真实 PDF / Word / Excel 文件放入 assets/files 文件夹，并把链接替换为对应文件名即可。");
+    });
+  });
+});
