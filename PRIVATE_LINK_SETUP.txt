@@ -1,0 +1,17 @@
+Wingshung Learning Center 私域资料配置
+
+1. 把 new-sales-inquiry-follow-up-sop-private.docx 上传到飞书、Google Drive、OneDrive 或公司云盘。
+2. 权限设置为：仅指定成员 / Restricted / Specific people。
+3. 复制云盘分享链接。
+4. 打开 sales-sop.html 和 templates.html。
+5. 搜索：
+   PASTE_YOUR_PRIVATE_CLOUD_LINK_HERE
+6. 将其全部替换成你的云盘链接。
+7. 把网站文件上传到 GitHub 仓库根目录。
+8. 不要把 SOP Word、报价表、客户资料上传到公开 GitHub 仓库。
+
+建议权限：
+- 普通员工：仅查看
+- 主管：编辑或管理
+- 外部链接分享：关闭
+- 下载权限：敏感资料建议关闭
